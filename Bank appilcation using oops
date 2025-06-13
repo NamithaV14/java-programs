@@ -1,0 +1,77 @@
+import java.util.Scanner;
+
+// Abstract class BankAccount
+abstract class BankAccount {
+    private String accountHolderName;
+    private double balance;
+
+    // Constructor
+    public BankAccount(String accountHolderName, double balance) {
+        this.accountHolderName = accountHolderName;
+        this.balance = balance;
+    }
+
+    // Abstract method
+    public abstract void displayDetails();
+
+    // Encapsulation (getters and setters)
+    public String getAccountHolderName() {
+        return accountHolderName;
+    }
+
+    public void setAccountHolderName(String accountHolderName) {
+        this.accountHolderName = accountHolderName;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+
+    // Deposit method
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+            System.out.println("Deposited amount: " + amount);
+        } else {
+            System.out.println("Invalid deposit amount.");
+        }
+    }
+
+    // Withdraw method
+    public void withdraw(double amount) {
+        if (amount > 0 && amount <= balance) {
+            balance -= amount;
+            System.out.println("Withdrawn amount: " + amount);
+        } else {
+            System.out.println("Invalid or insufficient amount.");
+        }
+    }
+}
+
+// Subclass SavingsAccount
+class SavingsAccount extends BankAccount {
+    public SavingsAccount(String accountHolderName, double balance) {
+        super(accountHolderName, balance);
+    }
+
+    @Override
+    public void displayDetails() {
+        System.out.println("Account Holder Name: " + getAccountHolderName());
+        System.out.println("Account Balance: " + getBalance());
+    }
+}
+
+// Main class
+public class Main {
+    public static void main(String[] args) {
+        SavingsAccount savings = new SavingsAccount("Nami", 2000.00);
+        savings.displayDetails();
+        savings.deposit(3000.0);
+        savings.withdraw(500.0);
+        savings.displayDetails();
+    }
+}
