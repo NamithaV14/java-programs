@@ -1,0 +1,21 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        int m1 = 2;
+        int n1 = 6;
+
+        int m2 = 9;
+        int n2 = 3;
+        int product1 = m1 * n1;
+        int product2 = m2 * n2;
+        System.out.println("the product of case1 is:" + product1);
+        System.out.println("the product of case2 is:" + product2);
+        if(m1 > n1){
+        }else{
+            System.out.println("n1 is greater than m1");
+        }
+
+
+    }
+    
+}
