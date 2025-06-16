@@ -1,0 +1,41 @@
+
+import java.util.*;
+public class electricity {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter the no of units consumed:");
+        int units = sc.nextInt();
+        sc.nextLine();
+        System.out.println("enter connection type:");
+        String conn = sc.nextLine();
+       // String type = "residential";
+    //residential rates
+    if(conn.equals("residential")){
+        if(units == 100){
+            int cost = units * 2;
+            System.out.println("price is " + cost);
+        }else if(units <= 300){
+            int cost = units * 3;
+            System.out.println("price is :" + cost);
+        }
+        else{
+            int cost = units * 10;
+            System.out.println("the cost is :" + cost);
+        }
+    }
+
+    if(conn.equals("commercial")){
+        if(units == 100){
+            int cost = units * 5;
+            System.out.println("the price is:" +cost);
+        }else if(units == 300){
+            int cost = units * 7;
+            System.out.println("the price is:" + cost);
+
+        }else{
+            int cost = units * 10;
+            System.out.println("the price is:" +cost);
+        }
+    }
+    }
+}
