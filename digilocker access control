@@ -1,0 +1,23 @@
+import java.util.*;
+public class bankdigilocker {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter locker ID:");
+        int id = sc.nextInt();
+        if(id / 2 != 0){
+            System.out.println("Access granted to vault");
+
+        }else{
+            System.out.println("Access denied");
+        }
+    }
+    
+}
+//true for Prime number ID
+//*Test Case :
+//Input :
+//Enter Locker ID: 29
+//Output: Access granted to vault
+//Output :
+//Enter Locker ID: 45
+//Output: Access denied 
