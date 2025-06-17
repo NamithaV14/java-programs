@@ -1,0 +1,42 @@
+import java.util.*;
+
+public class employeeaccess {
+    public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    System.out.println("enter job is fulltime or partime:");
+    String jobtype = sc.nextLine();
+    System.out.println("enter work experience:");
+    int yearsOfExperience = sc.nextInt();
+    System.out.println("if has security clearence press 1 and 2 for executive:");
+    int securityclearance = sc.nextInt();
+    System.out.println("if is not underinvestigation press 1,if yes press 2:");
+    int investigation = sc.nextInt();
+
+    if(jobtype.equals("FullTime")){
+        System.out.println("True");
+
+    }else{
+        System.out.println("False");
+    }
+    if(yearsOfExperience >= 2){
+        System.out.println("Allowed");
+
+    }else{
+        System.out.println("not allowed");
+    }
+    if(securityclearance == 1){
+        System.out.println("true");
+
+    }else{
+        System.out.println("false");
+    }
+    if(investigation == 1){
+        System.out.println("true");
+
+    }else{
+        System.out.println("false");
+    }
+    sc.close();
+}
+}
+
