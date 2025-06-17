@@ -1,0 +1,20 @@
+import java.util.*;
+public class shopkeeper{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter the cost1:");
+        int cost1 = sc.nextInt();
+        System.out.println("enter the cost2:");
+        int cost2 = sc.nextInt();
+        System.out.println("enter the cost3:");
+        int cost3 = sc.nextInt();
+        int Totalprice = cost1 + cost2 + cost3;
+        System.out.println("the total cost is:" + Totalprice);
+    }}
+//Test Case 01 :
+//input :  Prices: {5, 15, 25}
+//Output : 45 
+
+//Test Case 02 :
+//input : Prices: {100, 200, 150}
+//output : 450
