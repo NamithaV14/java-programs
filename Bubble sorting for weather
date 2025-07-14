@@ -1,0 +1,37 @@
+import java.util.Scanner;
+public class weather {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter the size of no of values:");
+        int size = sc.nextInt();
+
+        int[] arr = new int[size];
+
+
+        System.out.println("enter"  + size +  "weather values");
+        
+        for(int i=0; i<size; i++){
+            arr[i] = sc.nextInt();
+
+        }
+        System.out.println("the weather values are: ");
+        for(int i =0; i<size; i++){
+            System.out.println(arr[i] + " ");
+    
+        }
+
+        for(int x=0; x<=arr.length-1;x++){
+            for(int y=0; y < arr.length - 1 - x ; y++){
+                if(arr[y] > arr[y+1]){
+                    int temp = arr[y];
+                    arr[y] = arr[y+1];
+                    arr[y+1] = temp;
+                }
+            }
+        }
+        for(int num:arr){
+            System.out.print(num + "  ");
+        }
+
+    }}
+    
