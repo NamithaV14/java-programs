@@ -1,0 +1,34 @@
+import java.util.Scanner;
+public class hospitalbill {
+    public static void main(String[] args){
+Scanner sc = new Scanner(System.in);
+System.out.println("Enter room type:IF GENERAL(1),SEMI PRIVATE(2),PRIVATE(3)");
+int rt = sc.nextInt();
+System.out.println("enter No of days stayed:");
+int day = sc.nextInt();
+System.out.println("INSURANCE:YES(1) & NO(2)");
+int ins = sc.nextInt();
+System.out.println("enter age:");
+int age = sc.nextInt();
+
+int rmcharge = 0;
+if(rt == 1){
+     rmcharge = 1000*day;
+}
+else if(rt == 2){
+    rmcharge = 2000*day;
+}
+else{
+    rmcharge = 3000*day;
+    System.out.println("Room charge is " + rmcharge);
+}
+if(ins == 1){
+    double bill = rmcharge * 0.40;
+    System.out.println("including 40% insurace the bill is:" + bill);
+}
+if(age >= 60 ){
+    double seniorcitizen = rmcharge * 0.20;
+    System.out.println("including 20% senior discount the bill is " + seniorcitizen );
+}
+    }
+}
